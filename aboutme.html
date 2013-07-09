@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+</head>
+<body>
+  <h1>About Me</h1>
+  
+  <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+	<script>
+		var body = document.getElementsByTagName('body')[0]
+		body.style.fontFamily="Arial, sans-serif";
+		document.getElementById('nickname').innerHTML="Hennessy";
+		document.getElementById('favorites').innerHTML="Mangoes, Bicycles and Pizza";		
+		document.getElementById('hometown').innerHTML="Huntington Beach, CA";
+		var liList = document.getElementsByTagName('li');
+		for (var i = 0; i < liList.length; i++) {
+			liList[i].className = 'listitem';
+			liList[i].style.color = "red";
+		};
+		var profilePic = document.createElement('img');
+		profilePic.setAttribute('src', 'http://www.thatcutesite.com/uploads/2012/04/adorable_cute_baby_sloth.jpg');
+		profilePic.style.border = '1px solid black';
+		body.appendChild(profilePic);
+	</script>  
+ </body>
+</html>
